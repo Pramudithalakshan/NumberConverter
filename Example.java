@@ -1,5 +1,7 @@
+import java.util.*;
 class Example{
  public static void main(String args[]){
+	  Scanner input = new Scanner(System.in);
 	  System.out.println(" __   ______             __");
 	  System.out.println("|  \\ /      \\           |  \\");
 	  System.out.println(" \\$$|  $$$$$$\\  ______  | $$   ______");
@@ -28,7 +30,14 @@ class Example{
 	  System.out.printf("%5s %d %s %s %n","[",op3,"]","Octal Converter");
 	  System.out.printf("%5s %d %s %s %n","[",op4,"]","Hexadecimal Converter");
 	  System.out.printf("%5s %d %s %s %n","[",op5,"]","Roman Converter");
-	
-	
+	  System.out.println();
+	  System.out.print("Enter Option ->");
+	  int option = input.nextInt();
+	  switch(option){
+	  case 1:
+	  System.out.println("+-----------------------------------------+");
+	  System.out.println("|             Decimal Converter           |");
+	  System.out.println("+-----------------------------------------+"); 
+	 }
 	 }
 }
