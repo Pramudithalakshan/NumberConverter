@@ -113,7 +113,7 @@ class Example{
 	    }else{
 	   System.out.println("Invalid Input");
 	   
-	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
 	     String decision = input.next();
 	     int deci =  decision.charAt(0);
 	  	      
@@ -143,7 +143,7 @@ class Example{
 	  if(temp>1 | binNum<0){
 	   System.out.println("Invalid Input");
 	   
-	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
 	     String decision = input.next();
 	     int deci =  decision.charAt(0);
 	  	      
@@ -239,7 +239,7 @@ class Example{
       if(temp==8 | temp==9 | temp<0){
 		  System.out.println("Invalid Input");
 	   
-	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
 	     String decision = input.next();
 	     int deci =  decision.charAt(0);
 	  	      
@@ -367,7 +367,7 @@ class Example{
 	
 			  
 	     System.out.println("Invalid Input");
-	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
 	     String decision = input.next();
 	     int deci =  decision.charAt(0);
 	  	      
@@ -379,21 +379,135 @@ class Example{
 		     }
           break;
 	  }
+	  
 	  case 5:
-	  while(true){
-		   L4:while(true){
+	  L6:while(true){
+	  System.out.println();
+	  System.out.println();
 	  System.out.println("+-----------------------------------------+");
-	  System.out.println("|          Hexadecimal Converter          |");
+	  System.out.println("|          Roman Number Converter         |");
 	  System.out.println("+-----------------------------------------+"); 
 	  System.out.println();
 	  System.out.println();
-	  
-	  System.out.print("Enter an hexadecimal number :");
-	  String hexNum = input.next();
-      boolean novalid=true;
-	  }
-  }
-	  
+	  op1=1;
+	  op2=2;
+	  System.out.printf("%5s %d %s %s %n","[",op1,"]","Decimal Number to Roman Number Converter");
+	  System.out.printf("%5s %d %s %s %n","[",op2,"]","Binary Number to Decimal Number Converter");
+	  System.out.print("Enter an option->");
+	  option = input.nextInt();
+	  switch(option){
+		  
+	  case 1:
+	  System.out.println("+---------------------------------------------------+");
+	  System.out.println("|       Decimal Number to Roman Number Converter    |");
+	  System.out.println("+---------------------------------------------------+"); 
+      System.out.println();
+	  System.out.println();
+	  System.out.print("Enter an Decimal number->");
+	  int decimalNum = input.nextInt();
+	   String s = "";
+      if (decimalNum >= 1 && decimalNum <= 1000){  
+      while (decimalNum >= 1000) {
+        s += "M";
+        decimalNum -= 1000; 
+        }
+      while (decimalNum >= 900) {
+        s += "CM";
+        decimalNum -= 900;
+      }
+      while (decimalNum >= 500) {
+        s += "D";
+        decimalNum -= 500;
+     }
+     while (decimalNum >= 400) {
+        s += "CD";
+        decimalNum -= 400;
+     }
+     while (decimalNum >= 100) {
+        s += "C";
+        decimalNum -= 100;
+     }
+     while (decimalNum >= 90) {
+        s += "XC";
+        decimalNum -= 90;
+     }
+     while (decimalNum >= 50) {
+        s += "L";
+        decimalNum -= 50;
+     }
+     while (decimalNum >= 40) {
+        s += "XL";
+        decimalNum -= 40;
+     }
+     while (decimalNum >= 10) {
+        s += "X";
+        decimalNum -= 10;
+     }
+     while (decimalNum >= 9) {
+        s += "IX";
+        decimalNum -= 9;
+     }
+     while (decimalNum >= 5) {
+        s += "V";
+        decimalNum -= 5;
+     }
+     while (decimalNum >= 4) {
+        s += "IV";
+        decimalNum -= 4;
+     }
+     while (decimalNum >= 1) {
+        s += "I";
+        decimalNum -= 1;
+    }    
+   }else{
+    System.out.println("Invalid Input");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
+	     String decision = input.next();
+	     int deci =  decision.charAt(0);
+	  	      
+	         if(deci==89|deci==121){
+			  continue L6;
+		     }else{
+		       System.out.print("Exit!");	 
+		     }
+		     
+   }
+      System.out.println("Roman numeral :"+s);
+      break;
+      
+      //////////
+	  case 2:
+	  System.out.println("+---------------------------------------------------+");
+	  System.out.println("|       Roman Number to Decimal Number Converter    |");
+	  System.out.println("+---------------------------------------------------+"); 
+      System.out.println();
+	  System.out.println();
+	  System.out.print("Enter an Decimal number->");
+	  String romanNum = input.next();
+	  String d = "";
+      if (){  
+         
+   }else{
+    System.out.println("Invalid Input");
+	     System.out.print("Do you want to go to homepage (Y/N)->");
+	     String decision = input.next();
+	     int deci =  decision.charAt(0);
+	  	      
+	         if(deci==89|deci==121){
+			  continue L6;
+		     }else{
+		       System.out.print("Exit!");	 
+		     }
+		     
+   }
+	///////////  
+	  default:
+	  System.out.println("Enter valid input");
+	  continue L6;
+   }
+ }
+}
+   
   
    }
  }
