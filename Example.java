@@ -35,9 +35,200 @@ class Example{
 	  int option = input.nextInt();
 	  switch(option){
 	  case 1:
+	   L1:
+	   while(true){ //Loop start
 	  System.out.println("+-----------------------------------------+");
 	  System.out.println("|             Decimal Converter           |");
 	  System.out.println("+-----------------------------------------+"); 
+	  System.out.println();
+	  System.out.println();	  
+	  System.out.print("Enter an Decimal number :");
+	  int deciNum = input.nextInt();
+	  if(deciNum>0){
+		  String binSt = "";
+	      int binTemp=deciNum;
+	      
+	      String octSt = "";
+	      int octTemp=deciNum;
+	      
+	      String hexSt ="";
+	      int hexTemp=deciNum;
+	      
+	      //Decimal to binary
+	      do{
+			  binSt=binTemp%2+binSt;
+			  binTemp/=2;
+			  
+		  }while(binTemp!=0);
+		  
+		  //Decimal to octal
+		  do{
+			octSt=octTemp%8+octSt;
+			octTemp/=8;
+		  }while(octTemp!=0);
+		  
+		   //Decimal to hexadecimal
+		 
+		  do{
+
+			int remainder=hexTemp%16;
+			 
+			switch(remainder){
+			  case 10:
+			    hexSt="a"
+			    +hexSt;
+			    break;
+			  case 11:
+			    hexSt="b"
+			    +hexSt;
+			    break;
+			  case 12:
+			    hexSt="c"
+			    +hexSt;
+			    break;
+			  case 13:
+			    hexSt="d"
+			    +hexSt;
+			    break;
+			  case 14:
+			    hexSt="e"
+			    +hexSt;
+			    break;
+			  case 15:
+			    hexSt="f"
+			    +hexSt;
+			   	break; 
+			  default:
+			    hexSt=remainder+hexSt;
+			 }	 
+			hexTemp/=16;
+		 
+			
+		  }while(hexTemp!=0);
+		  
+		  System.out.println();
+		  System.out.println("Binary number :"+binSt);
+		  System.out.println("Octal number :"+octSt);
+		  System.out.println("Hexadecimal number :"+hexSt);  
+	    }else{
+	   System.out.println("Invalid Input");
+	   
+	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     String decision = input.next();
+	     int deci =  decision.charAt(0);
+	  	      
+	     if(deci==89|deci==121){
+			  continue L1;
+		 }else{
+		   System.out.print("Exit!");	 
+		 }
+	   
+		} //Loop end
+		  break;
+	  }
+	
+	
+	
+	
+	  case 2:
+	  L2:while(true){
+	  System.out.println("+-----------------------------------------+");
+	  System.out.println("|             Binary Converter            |");
+	  System.out.println("+-----------------------------------------+"); 
+	  System.out.println();
+	  System.out.println();
+	  System.out.print("Enter an Binary number :");
+	  int binNum = input.nextInt();
+      int temp=binNum%10;
+	  if(temp==8 | temp==9 | binNum<0){
+	   System.out.println("Invalid Input");
+	   
+	     System.out.print("Do you want to go to homepase (Y/N)->");
+	     String decision = input.next();
+	     int deci =  decision.charAt(0);
+	  	      
+	     if(deci==89|deci==121){
+			  continue L2;
+		 }else{
+		   System.out.print("Exit!");	 
+		 }
+	  }else{
+		  int deciSt = 0;
+	      int deciTemp=binNum;
+	      int position=0;
+	      
+	      String octSt2="";
+	      String hexSt2="";
+	      
+	    
+	  //Binary to decimal
+	    while (deciTemp!=0)
+		{
+			int b =deciTemp%10;
+			deciSt+=b*Math.pow(2,position);
+			deciTemp/=10;
+			position++;
+		}
+		position=0;
+		int octTemp2=deciSt;
+	//Binary to octal
+		 do 
+		 {
+			octSt2=octTemp2%8+octSt2;
+			octTemp2/=8;
+			
+		 }while(octTemp2!=0);
+		 
+	//Binary to hexadecimal
+	     int hexTemp2=deciSt;
+	     do 
+		 {
+			
+			int remainder=hexTemp2%16;
+	
+			switch(remainder){
+			  case 10:
+			    hexSt2="a"
+			    +hexSt2;
+			    break;
+			  case 11:
+			    hexSt2="b"
+			    +hexSt2;
+			    break;
+			  case 12:
+			    hexSt2="c"
+			    +hexSt2;
+			    break;
+			  case 13:
+			    hexSt2="d"
+			    +hexSt2;
+			    break;
+			  case 14:
+			    hexSt2="e"
+			    +hexSt2;
+			    break;
+			  case 15:
+			    hexSt2="f"
+			    +hexSt2;
+			   	break; 
+			  default:
+			    hexSt2=remainder+hexSt2;
+			 }	 
+			hexTemp2/=16;
+		 
+			
+		 }while(hexTemp2!=0);
+		 
+	      System.out.println();
+	      System.out.println("Decimal number :"+deciSt);
+		  System.out.println("Octal number :"+octSt2);
+		  System.out.println("Hexadecimal number :"+hexSt2);  
+	  }
+      break;
+      }
+	  case 3:
+	  case 4:
+	  case 5:
 	 }
 	 }
 }
