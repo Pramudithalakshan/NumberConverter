@@ -483,30 +483,80 @@ class Example{
       System.out.println();
 	  System.out.println();
 	  System.out.print("Enter an Decimal number->");
-	  String romanNum = input.next();
-	  String d = "";
-      if (){  
-         
-   }else{
-    System.out.println("Invalid Input");
-	     System.out.print("Do you want to go to homepage (Y/N)->");
-	     String decision = input.next();
-	     int deci =  decision.charAt(0);
+	  int deciNum=0;
+	  String romanNum = input.next().toUpperCase();
+       
+         for(int j =0;j<romanNum.length();j++){
+			 char convertD=romanNum.charAt(j);
+			  
+			 switch(convertD){
+			  case 'M':
+			  deciNum +=1000;
+			  break;
+			  
+			  case 'D':
+			  deciNum +=500;
+			  break;
+			  
+			  case 'C':
+			  deciNum +=100;
+			  break;
+			  
+			  case 'L':
+			  deciNum +=50;
+			  break;
+			  
+			  case 'X':
+			  deciNum +=10;
+			  break;
+			  
+			  case 'V':
+			  deciNum +=5;
+			  break;
+			  
+			  case 'I':
+			  deciNum +=1;
+			  break;
+			  default:
+			  System.out.print("Invalid Input");
+              System.out.print("Do you want to go to homepage (Y/N)->");
+	          String decision = input.next();
+              int deci =  decision.charAt(0);
 	  	      
-	         if(deci==89|deci==121){
-			  continue L6;
-		     }else{
-		       System.out.print("Exit!");	 
-		     }
-		     
-   }
-	///////////  
-	  default:
-	  System.out.println("Enter valid input");
-	  continue L6;
-   }
- }
-}
+	          if(deci==89|deci==121){
+		      continue L6;
+	          }else{
+		      System.out.print("Exit!");	 
+		      }
+	    
+			 }
+			} 
+			 if (romanNum.contains("IV")){
+              deciNum-=2;
+             }
+             if (romanNum.contains("IX")){
+              deciNum-=2;
+             }
+             if (romanNum.contains("XL")){
+              deciNum-=10;
+             }
+             if (romanNum.contains("XC"))
+             {
+             deciNum-=10;
+             }
+             if (romanNum.contains("CD")){
+             deciNum-=100;
+             }
+             if (romanNum.contains("CM")){
+             deciNum-=100;
+             
+		 }
+		 
+		 System.out.println(deciNum);
+
+      }
+    }
+  }
    
   
    }
