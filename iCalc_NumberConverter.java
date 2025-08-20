@@ -1,7 +1,8 @@
 import java.util.*;
-class Example{
+class iCalc_NumberConverter{
  public static void main(String args[]){
 	  Scanner input = new Scanner(System.in);
+	  ML:while(true){
 	  System.out.println(" __   ______             __");
 	  System.out.println("|  \\ /      \\           |  \\");
 	  System.out.println(" \\$$|  $$$$$$\\  ______  | $$   ______");
@@ -35,8 +36,7 @@ class Example{
 	  int option = input.nextInt();
 	  switch(option){
 	  case 1:
-	   L1:
-	   while(true){ //Loop start
+	   L1:while(true){ //Loop start
 	  System.out.println("+-----------------------------------------+");
 	  System.out.println("|             Decimal Converter           |");
 	  System.out.println("+-----------------------------------------+"); 
@@ -109,7 +109,20 @@ class Example{
 		  System.out.println();
 		  System.out.println("Binary number :"+binSt);
 		  System.out.println("Octal number :"+octSt);
-		  System.out.println("Hexadecimal number :"+hexSt);  
+		  System.out.println("Hexadecimal number :"+hexSt); 
+		 SL1:while(true){  
+		 System.out.print("Do you want to go to homepage (Y/N)->");
+	     String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL1;
+				}
+			}
 	    }else{
 	   System.out.println("Invalid Input");
 	   
@@ -222,7 +235,20 @@ class Example{
 	      System.out.println();
 	      System.out.println("Decimal number :"+deciSt);
 		  System.out.println("Octal number :"+octSt2);
-		  System.out.println("Hexadecimal number :"+hexSt2);  
+		  System.out.println("Hexadecimal number :"+hexSt2);
+		  SL2:while(true){  
+		 System.out.print("Do you want to go to homepage (Y/N)->");
+	     String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL2;
+				}
+			}  
 	  }
       break;
       }
@@ -309,10 +335,23 @@ class Example{
 			
 		 }while(hexTemp!=0);
 		   
-		    System.out.println();
+		   System.out.println();
 	      System.out.println("Decimal number :"+deciSt);
 		  System.out.println("binary number :"+binSt);
 		  System.out.println("Hexadecimal number :"+hexSt); 
+		  SL3:while(true){  
+		  System.out.print("Do you want to go to homepage (Y/N)->");
+	      String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL3;
+				}
+			}
 	   }
 	     break;
 	  }
@@ -362,7 +401,19 @@ class Example{
 	      System.out.println("Decimal number :"+deciNum);
 		  System.out.println("binary number :"+binSt);
 		  System.out.println("Hexadecimal number :"+octSt);
-			  
+		  SL4:while(true){  
+		  System.out.print("Do you want to go to homepage (Y/N)->");
+	      String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL4;
+				}
+			}
 		   }else{
 	
 			  
@@ -392,7 +443,7 @@ class Example{
 	  op1=1;
 	  op2=2;
 	  System.out.printf("%5s %d %s %s %n","[",op1,"]","Decimal Number to Roman Number Converter");
-	  System.out.printf("%5s %d %s %s %n","[",op2,"]","Binary Number to Decimal Number Converter");
+	  System.out.printf("%5s %d %s %s %n","[",op2,"]","Roman Number to Decimal Number Converter");
 	  System.out.print("Enter an option->");
 	  option = input.nextInt();
 	  switch(option){
@@ -473,7 +524,19 @@ class Example{
 		     
    }
       System.out.println("Roman numeral :"+s);
-      break;
+      SL5:while(true){  
+		 System.out.print("Do you want to go to homepage (Y/N)->");
+	     String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL5;
+				}
+			}
       
       //////////
 	  case 2:
@@ -552,13 +615,26 @@ class Example{
              
 		 }
 		 
-		 System.out.println(deciNum);
+		 System.out.println("Decimal Number->"+deciNum);
+		 SL6:while(true){  
+		 System.out.print("Do you want to go to homepage (Y/N)->");
+	     String op = input.next().toUpperCase();
+		    switch(op){
+				case "Y":
+				continue ML;
+				case "N":
+				break ML;
+				default:
+				System.out.println("Please Enter Valid Input");
+				continue SL6;
+				}
+			}
 
       }
     }
   }
    
-  
+  }
    }
  }
 
